@@ -18,15 +18,7 @@ After :
 
 W pierwszej kolejności dla naszej przykładowej tabeli musimy stworzyć miarę, która będzie wyświetlać kolory ze slaicera.
 
-Selected Colors = 
- "Showing " &
- CONCATENATEX ( 
-    VALUES ( 'Product'[ColorName] ) ,
-    'Product'[ColorName],
-     ", ",
-    'Product'[ColorName],
-    ASC
- ) & " colors."
+![image](https://github.com/user-attachments/assets/adda96ee-3003-4380-87cc-9a0ee9b66c94)
 
 Explanation of the Measure's Function:|
 
@@ -94,33 +86,7 @@ Result :
 New code : 
 
 
-Selected Colors v2 = 
-VAR Colors = VALUES ( 'Product'[ColorName] )
-VAR NumberOFcolors = COUNTROWS ( Colors )
-VAR NumberOFALLcolors =  COUNTROWS ( ALL ( 'Product'[ColorName] ) )
-VAR ALLcolorsSelected = ( NumberOFcolors = NumberOFALLcolors )
-VAR SelectedColors =
-    CONCATENATEX (
-        Colors,
-        'Product'[ColorName],
-        ", ",
-        'Product'[ColorName],
-        ASC
-    )
-VAR Result =
-    IF (
-        ALLcolorsSelected,
-        "Showing all colors.",
-        IF (
-             NumberOFcolors > 5,
-             "More than 5 colors selected, see slicer page for detailes.",
-             "Showing " & SelectedColors & " colors."
-        )
-    )
-RETURN
-    Result
-
-
+![image](https://github.com/user-attachments/assets/afd538a2-c07b-4b8d-a52c-42f84c763c3b)
 
 
 Explanation of the Measure's Function:
