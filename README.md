@@ -1,10 +1,10 @@
 # CONCATENATEX-Function
 Do you want to learn how to put a filter range from slaicer on a visualization ? SEE THIS 🚀
 ----------------------
-Czy chciałbyś wiedzieć, które pozycje ze slicera mają wpływ na twoją wizualizacje bez konieczności przeglądania wszystkich jego pozycji? 
-To może być uciążliwe oraz czasochłonne zwłaszcza jeśli jesteś zmuszony użyć slicera typu "drop-down".
+Would you like to know which items from the slicer are affecting your visualization without having to check each item?
+This can be annoying and time-consuming, especially if you have to use a "drop-down" slicer.
 
-Z pomocą przychodzi Funkcja " CONCATENATEX " ✨ Pozwoli nam na wyświetlanie wszystkich zaznaczonych pozycji ze slaicera na naszej wizualizacji !!!
+The CONCATENATEX function can help with this! ✨ It allows us to display all selected items from the slicer directly on our visualization!
 
 Before :  
  
@@ -16,7 +16,7 @@ After :
 
 -----------------------------
 
-W pierwszej kolejności dla naszej przykładowej tabeli musimy stworzyć miarę, która będzie wyświetlać kolory ze slaicera.
+First, for our sample table, we need to create a measure that will display the colors selected in the slicer.
 
 ![image](https://github.com/user-attachments/assets/adda96ee-3003-4380-87cc-9a0ee9b66c94)
 
@@ -56,23 +56,23 @@ These arguments specify that the colors should be sorted by the values in the 'P
 
 & again works as the concatenation operator, joining the result of CONCATENATEX with another text string. " colors." is the text that will be added at the end of the result. The final output will look like: "Showing Red, Blue, Green colors."
 
-Miarę możemy umieścić w dowolnym miejscu, np. w tytule wykresu tworząc dynamiczny tytuł czy w polu tekstowym umieszczonym w dowolnym miejscu na stronie raportu. 
-W naszym przykładzie użyliśmy dynamicznego tytułu.
+We can place the measure anywhere, for example, in the chart title to create a dynamic title, or in a text box located anywhere on the report page.
+In our example, we used a dynamic title.
 
-Oto jak go zaimplementować na naszej wizualizacji. 
+Here’s how to implement it in our visualization.
 
 ![image](https://github.com/user-attachments/assets/4e5165c0-7796-47ed-8f7c-22094fe3ab32)
 
 ![image](https://github.com/user-attachments/assets/42d1b789-e297-4d1d-87b8-9b7ebdb02cbd)
 
-Jedyną wadą naszej miary może być fakt, że jeśli nie będzie żadnego wybranego koloru, wygeneruje ona długą listę która będzie zabierać dużo miejsca na naszej wizualizacji. Co więcej, w przypadku wyboru więcej niż 5/6 kolorów lista będzie tak czy inaczej zbyt długa, aby zadowolić użytkownika.
+The only drawback of our measurement may be that if no color is selected, it will generate a long list that takes up a lot of space in our visualization. Furthermore, if more than 5 or 6 colors are chosen, the list will still be too long to satisfy the user.
 
 Example :
 
 ![image](https://github.com/user-attachments/assets/3303e1db-230c-411f-ab0a-d4df112006ae)
 
-Na to również posiadam rozwiązanie !!! 🚀
-musimy nieco skomplikować nasz kod aby uwzględnić omawiane wyżej możliwości. 
+I also have a solution for that!!! 🚀
+We need to complicate our code a bit to take the above possibilities into account.
 
 Result :
 
